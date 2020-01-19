@@ -2,17 +2,20 @@ var express = require('express');
 
 var app = express();
 
+app.set('view engine','ejs')
+
 app.get('/',function(req,res){
-    res.send("This is the homepage")
+    res.sendFile(__dirname+'/home.html')
 }) 
 
 app.get('/contact', function(req, res){
-    res.send("This is the contact page")
+    res.sendFile(__dirname+'/contact.html')
 })
 
-app.get('/profile/:id', function(req, res){
-    res.send("You requested to see the profile with the id of " + req.params.id)
-})
+app.get('/profile/:name',function(req,res){
+    let data = {age:27 , job:'Software Developer'}
+    res.render('profile',{person:req.params.name,data:data})
+});
 
 console.log('Server here, now listening to port 3000');
 app.listen(3000);
