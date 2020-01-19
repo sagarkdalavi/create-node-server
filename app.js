@@ -13,8 +13,9 @@ app.get('/contact', function(req, res){
 })
 
 app.get('/profile/:name',function(req,res){
-    let data = {age:27 , job:'Software Developer'}
+    let data = {age:27 , job:'Software Developer', hobbies:['eating','fighting','fishing']}
     res.render('profile',{person:req.params.name,data:data})
+
 });
 
 console.log('Server here, now listening to port 3000');
