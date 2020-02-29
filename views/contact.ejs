@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background: skyblue;
+            font-family: Verdana;
+            color: #fff;
+            padding: 30px;
+        }
+        h1 {
+            font-size: 48px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Contact Us!</h1>
+    <p>Contact the collest cats on the web right here...</p>
+    <form id="contact-form">
+        <label for="who">
+            Who do you want to contact?
+        </label>
+        <input type="text" name="who" value="<%= data.person %>">
+        <label for="department">
+            Which department?
+        </label>
+        <input type="text" name="department" value="<%= data.department %>">
+        <label for="email">
+            Your email?
+        </label>
+        <input type="email" name="email" value="<%= data.email %>">
+        <input type="submit" value="submit">
+
+    </form>
+</body>
+
+</html>

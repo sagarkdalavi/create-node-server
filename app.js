@@ -9,7 +9,7 @@ app.get('/',function(req,res){
 }) 
 
 app.get('/contact', function(req, res){
-    res.sendFile(__dirname+'/contact.html')
+    res.render('contact',{data:{person:req.query.person,department:req.query.department,email:req.query.email}})
 })
 
 app.get('/profile/:name',function(req,res){
