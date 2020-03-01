@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/sagarkdalavi/create-node-server#readme",
   "dependencies": {
+    "body-parse": "^0.1.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "nodemon": "^2.0.2"
